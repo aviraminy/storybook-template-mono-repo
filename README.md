@@ -1,1 +1,0 @@
-# storybook-template-mono-repo
