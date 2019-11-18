@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook  -s ./storybook-app/resources -p 8080",
+    "start": "npm run storybook",
     "build-storybook": "build-storybook"
   },
   "author": "",

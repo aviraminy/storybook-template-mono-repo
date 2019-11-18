@@ -1,4 +1,10 @@
 {
   "private": true,
-  "workspaces": [ "spaceit-*" ]
+  "scripts": {
+    "build": "yarn workspace spaceit-components build",
+    "start": "yarn workspace spaceit-storybook start" 
+  },
+  "workspaces": [
+    "spaceit-*"
+  ]
 }

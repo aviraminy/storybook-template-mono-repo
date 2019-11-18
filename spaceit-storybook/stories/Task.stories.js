@@ -1,14 +1,15 @@
 import React from 'react';
-//import Task from 'spaceit-components/lib/components/Task/Task.js';
+import {Task} from 'spaceit-components';
 
 
   
 export default {
     title: 'Task',
+    components: Task
   };
 
-export const simpleStory = () => <div>hello</div>;
-
-/* 
-storiesOf('SECTIONS.WELCOME', module)
-    .add('to Storybook', () => <div>hello</div>); */
+export const simpleStory = () => 
+  <>
+    <Task description='Buy food'/>
+    <Task urgent description= 'Buy weed !!!'/>
+  </>;

@@ -2,30 +2,20 @@ import React from 'react';
 import './Task.scss';
 
 interface Props {
-
+    description: string;
+    urgent?: boolean;
 }
 
 class Task extends React.PureComponent<Props> {
-/*     static propTypes = {
-        task: PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            title: PropTypes.string.isRequired,
-            state: PropTypes.string.isRequired,
-          }),
-          onArchiveTask: PropTypes.func,
-          onPinTask: PropTypes.func,
-    };
- */
 
     static defaultProps: Partial<Props> = {
-        
+        urgent: false
     };
 
     render() : JSX.Element{
-
+        const {urgent, description} = this.props;
         return (
-        
-            <div>Hello World</div>
+            <div className={urgent ? 'task-important': ''}>{description}</div>
             );
     }
 }

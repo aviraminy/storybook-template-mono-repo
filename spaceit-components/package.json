@@ -1,8 +1,8 @@
 {
   "name": "spaceit-components",
   "version": "1.0.0",
-  "main": "./lib/main.js",
-  "types": "./lib/main.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "description": "Write here description ...",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
