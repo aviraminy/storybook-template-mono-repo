@@ -1,4 +1,5 @@
 const path = require('path');
+const tsConfigFullPath = path.resolve(__dirname,'./tsconfig.json')
 
 // Export a function. Accept the base config as the only param.
 module.exports = async ({ config, mode }) => {
@@ -25,10 +26,31 @@ module.exports = async ({ config, mode }) => {
         },
       },
     ],
-    include: [path.resolve(__dirname, '../'),path.resolve(__dirname, '../node_modules/digitalone-common-components/'),path.resolve(__dirname, '../../spaceit-components/')],
+    include: [path.resolve(__dirname, '../'),path.resolve(__dirname, '../../spaceit-components/')],
   });
 
+  config.module.rules.push({
+    test: /\.(ts|tsx|d.ts)$/,
+    include: [path.resolve(__dirname, '../'),path.resolve(__dirname, '../../spaceit-components/lib/'),path.resolve(__dirname, '../node_modules/spaceit-components/lib/')],
+   
 
+    use: [
+       {
+        loader: require.resolve('ts-loader'),
+        options: {
+          configFile: tsConfigFullPath
+        } 
+      }, 
+      {
+        loader: require.resolve('react-docgen-typescript-loader'),
+        options: {
+          tsconfigPath: tsConfigFullPath
+        },
+      },
+    ],
+  });
+
+  config.resolve.extensions.push('.d.ts','.ts', '.tsx');
   config.resolve.extensions.push('.scss');
   return config;
 };

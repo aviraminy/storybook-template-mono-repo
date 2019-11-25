@@ -12,22 +12,26 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "spaceit-components": "file:../spaceit-components",
     "react": "^16.11.0",
-    "react-dom": "^16.11.0"
+    "react-dom": "^16.11.0",
+    "spaceit-components": "file:../spaceit-components"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.2.5",
     "@storybook/addon-cssresources": "^5.2.5",
     "@storybook/addon-docs": "^5.2.5",
+    "@storybook/addon-info": "^5.2.6",
     "@storybook/addon-knobs": "^5.2.5",
     "@storybook/addon-links": "^5.2.5",
     "@storybook/addon-viewport": "^5.2.5",
     "@storybook/react": "^5.2.5",
+    "@types/storybook__react": "^4.0.2",
     "babel-loader": "^8.0.6",
     "css-loader": "^3.2.0",
     "node-sass": "^4.13.0",
+    "react-docgen-typescript-loader": "^3.4.0",
     "sass-loader": "^8.0.0",
-    "style-loader": "^1.0.0"
+    "style-loader": "^1.0.0",
+    "ts-loader": "^6.2.1"
   }
 }

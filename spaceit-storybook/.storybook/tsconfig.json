@@ -1,0 +1,31 @@
+{
+    "compilerOptions": {
+      "outDir": "./lib",
+      "module": "es2015",
+      "target": "es6",
+      "lib": [ "es2016", "dom"],
+      "sourceMap": true,
+      "allowJs": false,
+      "jsx": "react",
+      "resolveJsonModule": true,
+      "esModuleInterop": true,
+      "moduleResolution": "node",
+      "rootDirs": ["stories"],
+      "baseUrl": "stories",
+      "forceConsistentCasingInFileNames": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noImplicitAny": false,
+      "strictNullChecks": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "noUnusedLocals": true,
+      "declaration": true,
+      "allowSyntheticDefaultImports": true,
+      "experimentalDecorators": true,
+      "typeRoots": [
+        "node_modules/@types"
+      ]
+    },
+    "include": ["../stories/**/*" , "../../node_modules/spaceit-components/lib/**/*"],
+    "exclude": ["node_modules", "build", "scripts"],
+  }
